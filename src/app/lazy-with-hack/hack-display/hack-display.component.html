@@ -1,0 +1,11 @@
+<pre>
+  <code [highlight]="data | async | json"></code>
+</pre>
+
+<h3>Expectation</h3>
+<p>"lazy" and "core" http interceptor is called</p>
+
+<h3>Result</h3>
+<p>
+  Works. This requires to write custom HttpHandler that combines interceptors from both injectors.
+</p>

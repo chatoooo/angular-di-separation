@@ -1,0 +1,12 @@
+<pre>
+  <code [highlight]="data | async | json"></code>
+</pre>
+
+<h3>Expectation</h3>
+<p>"lazy" (and "core") http interceptor is called</p>
+
+<h3>Result</h3>
+<p>
+  Works (partially). But the "core" interceptor is not called. As the module uses it's own instance of HttpClient, the "lazy-with-http"
+  interceptor is visible to the HttpClient. But the "core" is not visible to the client as the injector has its own.
+</p>

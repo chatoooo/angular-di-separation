@@ -1,0 +1,16 @@
+nav {
+  background-color: lightslategray;
+  a {
+    text-decoration: none;
+    &.active {
+      background-color: darkgray;
+    }
+    &:hover {
+      background-color: gray;
+    }
+  }
+  & > * {
+    display: inline-block;
+    padding: 10px 15px;
+  }
+}
